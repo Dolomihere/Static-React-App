@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.centered-box {
+    width: 100%;
+    max-width: 500px;
+    background: skyblue;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+.title {
+    text-align: center;
+    color: steelblue;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    .centered-box {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .todo-input {
+        width: 100%;
+        flex: 1;
+    }
+
+    .todo-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .todo-btn {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .todo-txt {
+        width: 100%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li span {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .scrollable-list {
+        max-height: 300px;
+        padding: 5px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}

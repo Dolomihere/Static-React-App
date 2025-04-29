@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react"
-import { ToDoList } from "./components/TodoList"
-import { ToDoInput } from "./components/TodoInput"
+import { useState, useEffect } from 'react'
+import { ToDoList } from './components/TodoList'
+import { ToDoInput } from './components/TodoInput'
+
+import './App.css'
 
 function App() {    
     let [todos, setToDos] = useState(() => {
@@ -15,7 +17,9 @@ function App() {
     }, [todos])
 
     function AddToDo(todo) {
-        setToDos([...todos, todo]);
+        if (todo !== ""){
+            setToDos([...todos, todo]);
+        }
     }
 
     function EditToDo(todo, index) {
@@ -29,10 +33,16 @@ function App() {
     }
 
     return (
-    <>
-        <ToDoInput input={input} setInput={setInput} AddToDo={AddToDo}></ToDoInput>
-        <ToDoList lists={todos} EditToDo={EditToDo} DeleteToDo={DeleteToDo}></ToDoList>
-    </>
+    <div className="container">
+        
+        <div className="centered-box">
+            <h2 className="title">Simple to do lists</h2>
+
+            <ToDoInput input={input} setInput={setInput} AddToDo={AddToDo}></ToDoInput>
+            <ToDoList lists={todos} EditToDo={EditToDo} DeleteToDo={DeleteToDo}></ToDoList>
+        </div>
+
+    </div>
     )
 }
 

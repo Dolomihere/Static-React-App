@@ -1,0 +1,27 @@
+.scrollable-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    background-color: khaki;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.todo-txt {
+    margin: 0 0 10px 0;
+    word-wrap: break-word;
+}
+
+li span {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
